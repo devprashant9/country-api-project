@@ -41,4 +41,5 @@ The `Link` tag has an prop called `state` which helps to pass data from current 
 The `Outlet` tag has an prop called `context` which helps to pass data to all the children component and to access the data it provides a hook called `useOutletContext()`.
 
 ## 05-02-2025
-Completed the project and pushed to github
+Completed the project and pushed to github.
+
