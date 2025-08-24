@@ -8,7 +8,7 @@ function Main({ search }) {
   const mode = useOutletContext();
 
   useEffect(() => {
-    fetch(`https://restcountries.com/v3.1/all`)
+    fetch(`https://restcountries.com/v3.1/all?fields=name,capital,region,subregion,population,area,flags,languages,currencies,tld`)
       .then((res) => res.json())
       .then((data) => {
         setCountriesData(data);
@@ -33,7 +33,7 @@ function Main({ search }) {
               .map((country) => (
                 <Card
                   key={country.name.common}
-                  imageURL={country.flags.svg}
+                  imageURL={country?.flags?.svg}
                   countryTitle={country.name.common}
                   countryArea={country.area}
                   countryRegion={country.region}
